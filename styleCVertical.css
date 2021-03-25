@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Tempus Sans ITC';
+    src: url('fonts/TEMPSITC.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ambleregular';
+    src: url('fonts/Amble-Regular-webfont.eot');
+    src: url('fonts/Amble-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Amble-Regular-webfont.woff2') format('woff2'),
+         url('fonts/Amble-Regular-webfont.woff') format('woff'),
+         url('fonts/Amble-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Amble-Regular-webfont.svg#ambleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	background-image: url("images/fond_orange.jpg");
+}
+figure {
+    float : left;
+}
+#gauche {
+    width:60%;
+    display:flex;
+    flex-direction: row;
+    font-size: 0.9em;
+    align-items: flex-end;
+}
+#photo_adresse {
+    width:60%;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 0 24px 0 0;
+}
+#photo_adresse div {
+    padding : 12px;
+}
+#perso{
+    width:40%;
+    margin: 12px 0 12px 0;
+}
+
+header {
+    min-height: 180px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+#droite {
+    align-items: center;
+    width:40%;
+}
+#droite p {
+    border: solid #3C90DD 2px;
+    border-radius : 10px;
+    text-align: justify;
+    font-size: 0.9em;
+    padding : 5px;
+    max-width: 500px;
+    margin : auto;
+}
+
+span {
+    color:blue;
+    text-decoration: underline;
+    word-wrap: break-word;
+}
+section {
+    display:flex;
+    flex-direction: row;
+}
+article {
+    width:30%;
+}
+
+header, article {
+	background-color: white;
+	border-left : 1px solid red;
+	box-shadow : 2px 2px 4px white;
+	padding : 5px;
+	margin: 24px;
+}
+
+h1 , h2, h3 {
+	color:#3C90DD;
+	font-family : "Tempus Sans ITC", "ambleregular", Arial, Verdana, serif;
+}
+h2 {
+	text-align : center;
+	clear : both;
+}
+p, li, div {
+    font-family : "Century Gothic", "ambleregular", Arial, Verdana, serif;
+}
+p {
+    margin : 5px 10px;
+}
+strong {
+    font-family : "Century Gothic", "ambleregular", Arial, Verdana, serif;
+    font-size: 0.95em;
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 640px){
+    header {
+        flex-direction: column;
+    }
+    #gauche {
+        width:100%;
+    }
+    #droite {
+        width:100%;
+    }
+    section {
+        flex-direction: column;
+    }
+    article {
+        width:auto;
+        margin: 24px;
+    }
+}
+@media screen and (max-width: 640px) {
+   header {
+        flex-direction: column;
+    }
+    #gauche {
+        width:100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #perso {
+        margin-left : 50px;
+        width : auto;
+    }
+    #droite {
+        width:100%;
+    }
+    section {
+        flex-direction: column;
+    }
+    article {
+        width:auto;
+        margin: 24px;
+    }
+}
